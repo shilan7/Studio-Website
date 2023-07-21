@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: black;
+}
+
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: transparent;
+  color: white;
+}
+
+nav > ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav > ul > li {
+  padding: 10px;
+}
+
+.coverImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 600px;
+  background-image: url("https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.coverImage3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.pexels.com/photos/7654250/pexels-photo-7654250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  height: 400px;
+  margin-top: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(155%);
+}
+
+.coverImage3 > h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-family: "Josefin Slab", serif;
+  font-family: "Kalam", cursive;
+  font-size: 40px;
+  color: rgb(156, 69, 2);
+}
+
+.imagefade {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  opacity: 40%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 200px;
+  text-align: center;
+  color: white;
+}
+
+.section2 > h1 {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.tiles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  flex-wrap: wrap;
+}
+
+.tiles > button {
+  width: 745px;
+  height: 450px;
+  margin: 5px;
+  color: white;
+  font-size: 50px;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+.btnhover:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btnhover {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.4s;
+}
+
+.button1 {
+  background-image: url("https://images.pexels.com/photos/8197350/pexels-photo-8197350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+}
+
+.button2 {
+  background-image: url("https://images.pexels.com/photos/542552/pexels-photo-542552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+}
+
+.button3 {
+  background-image: url("https://images.pexels.com/photos/8476438/pexels-photo-8476438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+}
+
+.button4 {
+  background-image: url("https://images.pexels.com/photos/7087608/pexels-photo-7087608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: left;
+}
+
+.button5 {
+  background-image: url("https://images.pexels.com/photos/4054465/pexels-photo-4054465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+}
+
+.button6 {
+  background-image: url("https://img.freepik.com/premium-photo/sound-engineer-working-studio-with-equipment_1157-47933.jpg?w=900");
+  background-position: center;
+}
+
+/* .button7 {
+    background-image: url("https://images.pexels.com/photos/2718645/pexels-photo-2718645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center;
+  } */
+
+.insta {
+  margin-top: 30px;
+}
+
+.insta > h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+}
