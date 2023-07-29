@@ -175,3 +175,49 @@ a {
   margin-bottom: 30px;
   font-family: "Roboto", sans-serif;
 }
+
+.tileDescription{
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 50px 100px;
+}
+.descOne{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+
+}
+
+.descOne>h1{
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+.descOne>p{
+  font-size: 20px;
+}
+.descTwo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+
+}
+.descTwo>h1{
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+.offerStack{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.offerStack>img{
+  padding: 50px;
+}
+
+
