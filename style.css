@@ -46,6 +46,10 @@ nav > ul > li {
   background-position: center;
 }
 
+.coverImage > h1 {
+
+}
+
 .coverImage3 {
   display: flex;
   justify-content: center;
@@ -175,6 +179,137 @@ a {
   margin-bottom: 30px;
   font-family: "Roboto", sans-serif;
 }
+
+/* /////////////////////////////////////////////////////////////////////////// */
+
+/* Music Production Cover */
+.coverImageMP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  
+  height: 600px;
+  background-image: url("https://img.freepik.com/free-photo/close-up-sound-engineer-hands-recording-music_1157-47932.jpg?w=1060&t=st=1690632642~exp=1690633242~hmac=805324b4e2e43c7e5b1365bb116f2ad782d47a39fdc56c867f6313fa7473dc51");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  ;
+}
+
+.coverImageMP > h1{
+  font-size: 80px;
+  letter-spacing: 4px;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* Mixing and Mastering Cover */
+.coverImageMM {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 600px;
+  
+  background-image: url("https://images.unsplash.com/photo-1509310202330-aec5af561c6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1209&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.coverImageMM > h1{
+  font-size: 80px;
+  letter-spacing: 4px;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* Studio Recording Cover */
+.coverImageSR {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 600px;
+  filter: saturate(0%);
+  background-image: url("https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.coverImageSR > h1{
+  font-size: 80px;
+  letter-spacing: 4px;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+
+/* Sound Design Cover */
+.coverImageSD {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 600px;
+  filter: saturate(0%);
+  background-image: url("https://img.freepik.com/free-photo/person-working-soundboard-dark-room_188544-37987.jpg?w=1380&t=st=1690630040~exp=1690630640~hmac=5bcd9760da66cae0394566b8cbb1bf235ff63214c01c05b5b9c7472f1ffe942b");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.coverImageSD > h1{
+  font-size: 80px;
+  letter-spacing: 4px;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* Film Scoring Cover */
+.coverImageFS {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 600px;
+  background-image: url("https://images.pexels.com/photos/8476438/pexels-photo-8476438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.coverImageFS > h1{
+  font-size: 80px;
+  letter-spacing: 4px;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* Post Production Cover */
+.coverImagePP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 600px;
+  filter: saturate(0%);
+  background-image: url("https://images.pexels.com/photos/8476438/pexels-photo-8476438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.coverImagePP > h1{
+  font-size: 80px;
+  letter-spacing: 4px;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+
 
 .tileDescription{
   color: white;
