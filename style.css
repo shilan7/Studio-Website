@@ -46,6 +46,10 @@ nav > ul > li {
   background-position: center;
 }
 
+.coverImage > h1 {
+
+}
+
 .coverImage3 {
   display: flex;
   justify-content: center;
@@ -174,4 +178,236 @@ a {
   text-align: center;
   margin-bottom: 30px;
   font-family: "Roboto", sans-serif;
+}
+
+.section2{
+  padding-bottom: 200px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+
+/* Music Production Cover */
+.coverImageMP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 550px;
+  background-image: url("https://img.freepik.com/free-photo/close-up-sound-engineer-hands-recording-music_1157-47932.jpg?w=1060&t=st=1690632642~exp=1690633242~hmac=805324b4e2e43c7e5b1365bb116f2ad782d47a39fdc56c867f6313fa7473dc51");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  ;
+}
+
+.coverImageMP > h1{
+  font-size: 80px;
+  letter-spacing: 4px;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* Mixing and Mastering Cover */
+.coverImageMM {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 550px;
+  background-image: url("https://images.unsplash.com/photo-1509310202330-aec5af561c6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1209&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:  top;
+}
+
+.coverImageMM > h1{
+  font-size: 80px;
+  letter-spacing: 4px;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* Studio Recording Cover */
+.coverImageSR {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 550px;
+  background-image: url("https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top 30%;
+}
+
+.coverImageSR > h1{
+  font-size: 80px;
+  letter-spacing: 4px;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+
+/* Sound Design Cover */
+.coverImageSD {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 550px;
+  background-image: url("https://img.freepik.com/free-photo/person-working-soundboard-dark-room_188544-37987.jpg?w=1380&t=st=1690630040~exp=1690630640~hmac=5bcd9760da66cae0394566b8cbb1bf235ff63214c01c05b5b9c7472f1ffe942b");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.coverImageSD > h1{
+  font-size: 80px;
+  letter-spacing: 4px;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* Film Scoring Cover */
+.coverImageFS {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 550px;
+  background-image: url("https://images.pexels.com/photos/8100067/pexels-photo-8100067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.coverImageFS > h1{
+  font-size: 80px;
+  letter-spacing: 4px;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* Post Production Cover */
+.coverImagePP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 550px;
+  background-image: url("https://images.pexels.com/photos/12840332/pexels-photo-12840332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.coverImagePP > h1{
+  font-size: 80px;
+  letter-spacing: 4px;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+
+
+.tileDescription{
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 50px 100px;
+}
+.descOne{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+
+}
+
+.descOne>h1{
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+.descOne>p{
+  font-size: 20px;
+}
+.descTwo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+
+}
+.descTwo>h1{
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+.offerStack{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10%;
+}
+.offerStack>img{
+  height: 85px;
+  margin-right: 5%;
+}
+
+.video1 {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+}
+.vid1 {
+  width: 50%;
+}
+
+/* MAKING THE FORM */
+
+.container {
+  width: 100%;
+  height:100vh;
+  background: #001660;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+form{
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+form > h3{
+  color: #555;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+form > input, form > textarea{
+  border: 0;
+  margin:10px 0;
+  padding: 20px;
+  outline: none;
+  background: #f5f5f5;
+  font-size: 16px;
+}
+form > button {
+  padding: 15px;
+  background:#ff5361;
+  color: #fff;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px auto 0;
+  border-radius: 30px;
 }
