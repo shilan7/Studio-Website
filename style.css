@@ -50,6 +50,10 @@ nav > ul > li {
 
 }
 
+.coverImage > h1 {
+
+}
+
 .coverImage3 {
   display: flex;
   justify-content: center;
