@@ -141,9 +141,51 @@
     </p>
   </div>
 
+  <div id="background" class="container">
+    <button class="open-form-button" onclick="openForm()">Get In Touch!</button>
+    <div class="popup-form" id="myForm">
+      <div class="form-container">
+        <span class="close-button" onclick="closeForm()">&#x2716;</span>
+        <form onsubmit="sendMail(); reset(); return false;">
+          <h3>GET IN TOUCH</h3>
+          <div class="form-row">
+            <input type="text" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-row">
+            <input type="email" id="email" placeholder="Email id" required>
+          </div>
+          <div class="form-row">
+            <input type="text" id="phone" placeholder="Phone Number" required>
+          </div>
+          <div class="form-row">
+            <input type="text" id="location" placeholder="Where Are You Located?" required>
+          </div>
+          <div class="form-row">
+            <input type="text" id="role" placeholder="What Best Describes You?" required>
+          </div>
+          <div class="form-row">
+            <input type="text" id="songs" placeholder="How Many Songs" required>
+          </div>
+          <div class="form-row">
+            <input type="text" id="genre" placeholder="Genre/Style" required>
+          </div>
+          <div class="form-row">
+            <input type="text" id="budget" placeholder="Estimated Budget" required>
+          </div>
+          <div class="form-row">
+            <input type="text" id="time" placeholder="Time Frame" required>
+          </div>
+          <div class="form-row">
+            <textarea id="message" rows="4" placeholder="Project Details"></textarea>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
-  <div class="container">
-    <!-- <form onsubmit="sendEmail(); reset(); return false;"> -->
+  <!-- <div class="container">
+    <form onsubmit="sendEmail(); reset(); return false;">
       <form  onsubmit="sendMail(); reset(); return false;">
       <h3>GET IN TOUCH</h3>
       <input type="text" id="name" placeholder="Your Name" required>
@@ -159,7 +201,7 @@
       <button type="submit"> Send </button>
     </form>
 
-  </div>
+  </div> -->
 
  <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script>
@@ -177,6 +219,8 @@
       );
     }
   </script> -->
+  <script src="./email.js"></script>
+
 </body>
 
 </html>

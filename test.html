@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Styles for the pop-up form */
+        .popup-form {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            width: 400px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styles for the close button */
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="openForm()">Open Form</button>
+
+        <div class="popup-form" id="myForm">
+            <div class="form-container">
+                <span class="close-button" onclick="closeForm()">&times;</span>
+                <form onsubmit="sendMail(); reset(); return false;">
+                    <h3>GET IN TOUCH</h3>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Email id" required>
+                    <input type="text" id="phone" placeholder="Phone Number" required>
+                    <input type="text" id="location" placeholder="Where Are You Located?" required>
+                    <input type="text" id="role" placeholder="What Best Describes You?" required>
+                    <input type="text" id="songs" placeholder="How Many Songs" required>
+                    <input type="text" id="genre" placeholder="Genre/Style" required>
+                    <input type="text" id="budget" placeholder="Estimated Budget" required>
+                    <input type="text" id="time" placeholder="Time Frame" required>
+                    <textarea id="message" rows="4" placeholder="Project Details"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+        function sendMail() {
+            // Implement your email sending logic here
+            // You can use AJAX or other methods to send the form data
+        }
+
+        function reset() {
+            // Reset the form fields here if needed
+        }
+    </script>
+</body>
+</html>

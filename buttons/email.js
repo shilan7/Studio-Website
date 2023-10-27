@@ -1,3 +1,21 @@
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
+
+// Add event listener to the container
+document.getElementById("background").addEventListener("click", function (event) {
+    if (event.target === this) {
+        closeForm();
+        var form = document.getElementById("myForm").querySelector("form");
+        form.reset(); // Clear the form data
+        document.getElementById("myForm").style.display = "none";
+    }
+});
+
 function sendMail() {
     var params = {
         name: document.getElementById("name").value,
@@ -32,5 +50,4 @@ function sendMail() {
 
         })
         .catch(err => console.log(err));
-
 }
