@@ -25,13 +25,19 @@ nav {
   color: white;
 }
 
-nav>ul {
+nav > h1 {
+  font-size: 2rem;
+}
+
+nav > ul {
   list-style-type: none;
   display: flex;
 }
 
-nav>ul>li {
+nav > ul > li {
   padding: 10px;
+  font-weight: bolder;
+  font-size: larger;
 }
 
 .coverImage {
@@ -46,9 +52,10 @@ nav>ul>li {
   background-position: center;
 }
 
-.coverImage>h1 {}
-
-.coverImage>h1 {}
+.coverImage > h1 {
+  margin-bottom: 10%;
+  font-size: 2.5rem;
+}
 
 .coverImage3 {
   display: flex;
@@ -63,7 +70,7 @@ nav>ul>li {
   filter: brightness(155%);
 }
 
-.coverImage3>h2 {
+.coverImage3 > h2 {
   font-family: "Bebas Neue", sans-serif;
   font-family: "Josefin Slab", serif;
   font-family: "Kalam", cursive;
@@ -93,7 +100,7 @@ nav>ul>li {
   color: white;
 }
 
-.section2>h1 {
+.section2 > h1 {
   font-size: 25px;
   padding-bottom: 20px;
 }
@@ -106,7 +113,7 @@ nav>ul>li {
   flex-wrap: wrap;
 }
 
-.tiles>button {
+.tiles > button {
   width: 745px;
   height: 450px;
   margin: 5px;
@@ -174,7 +181,7 @@ a {
   margin-top: 30px;
 }
 
-.insta>h2 {
+.insta > h2 {
   color: white;
   text-align: center;
   margin-bottom: 30px;
@@ -200,7 +207,7 @@ a {
   background-position: center;
 }
 
-.coverImageMP>h1 {
+.coverImageMP > h1 {
   font-size: 80px;
   letter-spacing: 4px;
   border: none;
@@ -220,7 +227,7 @@ a {
   background-position: top;
 }
 
-.coverImageMM>h1 {
+.coverImageMM > h1 {
   font-size: 80px;
   letter-spacing: 4px;
   border: none;
@@ -240,13 +247,12 @@ a {
   background-position: center top 30%;
 }
 
-.coverImageSR>h1 {
+.coverImageSR > h1 {
   font-size: 80px;
   letter-spacing: 4px;
   border: none;
   font-family: "Bebas Neue", sans-serif;
 }
-
 
 /* Sound Design Cover */
 .coverImageSD {
@@ -261,7 +267,7 @@ a {
   background-position: top;
 }
 
-.coverImageSD>h1 {
+.coverImageSD > h1 {
   font-size: 80px;
   letter-spacing: 4px;
   border: none;
@@ -281,7 +287,7 @@ a {
   background-position: bottom;
 }
 
-.coverImageFS>h1 {
+.coverImageFS > h1 {
   font-size: 80px;
   letter-spacing: 4px;
   border: none;
@@ -301,14 +307,12 @@ a {
   background-position: bottom;
 }
 
-.coverImagePP>h1 {
+.coverImagePP > h1 {
   font-size: 80px;
   letter-spacing: 4px;
   border: none;
   font-family: "Bebas Neue", sans-serif;
 }
-
-
 
 .tileDescription {
   color: white;
@@ -323,16 +327,15 @@ a {
   flex-direction: column;
   justify-content: center;
   width: 500px;
-
 }
 
-.descOne>h1 {
+.descOne > h1 {
   text-align: center;
   margin-bottom: 25px;
   font-size: 25px;
 }
 
-.descOne>p {
+.descOne > p {
   font-size: 20px;
 }
 
@@ -341,10 +344,9 @@ a {
   flex-direction: column;
   justify-content: center;
   width: 500px;
-
 }
 
-.descTwo>h1 {
+.descTwo > h1 {
   text-align: center;
   margin-bottom: 25px;
   font-size: 25px;
@@ -357,7 +359,7 @@ a {
   padding-bottom: 10%;
 }
 
-.offerStack>img {
+.offerStack > img {
   height: 85px;
   margin-right: 5%;
 }
@@ -375,12 +377,21 @@ a {
 /* MAKING THE FORM */
 .container {
   width: 100%;
-  height: 100vh;
-  background: #001660;
+  height: 30vh;
+  background: none;
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
+/* Horizontal line between form button */
+hr {
+  height: 0.01rem;
+  border-color: rgb(236, 99, 49);
+  align-items: center;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /* Styles for the pop-up form */
@@ -407,21 +418,22 @@ a {
 
 /* Button styles for opening the form */
 .open-form-button {
-  background: #ff5361;
+  background: rgb(244, 79, 19);
   color: #fff;
   font-size: 18px;
+  font-weight: bolder;
   border: 0;
   outline: none;
   cursor: pointer;
-  width: 150px;
+  width: max-content;
   margin: 20px auto;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   text-align: center;
   padding: 15px;
 }
 
 .open-form-button:hover {
-  background: #ff333c;
+  background: rgb(240, 101, 50);
   /* Change color on hover */
 }
 
@@ -463,7 +475,7 @@ a {
   max-width: 600px;
   border-radius: 10px;
 } */
-form>h3 {
+form > h3 {
   color: #555;
   font-weight: 800;
   margin-bottom: 20px;
@@ -483,23 +495,145 @@ form>h3 {
   width: 100%; /* Expand the input fields to fill the row */
 }
 
-form>input,
-form>textarea {
+form > input,
+form > textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 100%; /* Expand the input fields to fill the row */
 }
 
-form>button {
+form > button {
   padding: 15px;
-  background: #ff5361;
+  text-align: center;
+  background: rgb(244, 79, 19);
   color: #fff;
   font-size: 18px;
+  font-weight: bolder;
   border: 0;
   outline: none;
   cursor: pointer;
   width: 150px;
   margin: 20px auto 0;
-  border-radius: 30px;
+}
+
+/* Accordion FAQ CSS below */
+h4 {
+  color: white;
+  text-align: center;
+  font-size: larger;
+  margin-top: 50px;
+}
+
+.faq-body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.faq-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 100px 150px;
+  margin-top: 50px;
+}
+.faq-item {
+  /* display: flex;
+  flex-direction: column; */
+  flex-basis: max-width;
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 450px;
+  margin: 10px 20px;
+}
+
+.accordion {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 20px 15px;
+  width: 100%;
+  border: 1px solid lightgray;
+  text-align: left;
+  outline: none;
+  font-size: 12px;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: none;
+}
+
+.accordion:after {
+  content: "+";
+  color: orangered;
+  font-weight: bold;
+  font-size: medium;
+  float: left;
+  margin-right: 10px;
+}
+
+.active:after {
+  content: "-";
+  color: red;
+  font-size: 15px;
+}
+
+.panel {
+  background-color: none;
+  color: rgb(110, 109, 109);
+  max-height: 0;
+  border-top: none;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Footer for all pages */
+.footer-container {
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: rgb(40, 36, 36);
+}
+
+footer {
+  color: white;
+  text-align: center;
+}
+
+/* Styles for the pop-up form */
+#popup-form-thanks {
+  display: none;
+  padding: 2vw 4vw;
+  width: 90%;
+  max-width: max-content;
+  border-radius: 10px;
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 80%; /* Set a maximum height for the form */
+  overflow-y: auto; /* Add vertical scroll when content exceeds max-height */
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Styles for the close button */
+.close-btn-thanks {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.close-btn-thanks:hover {
+  transform: scale(1.2); /* Scale up on hover for a cool effect */
 }
