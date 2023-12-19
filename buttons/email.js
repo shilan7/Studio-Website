@@ -6,7 +6,8 @@ function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
 
-// Add event listener to the container
+
+// Add event listener to the container. It allows to clear and close the form when clicked outside the form-container
 document.getElementById("background").addEventListener("click", function (event) {
     if (event.target === this) {
         closeForm();
@@ -15,6 +16,23 @@ document.getElementById("background").addEventListener("click", function (event)
         document.getElementById("myForm").style.display = "none";
     }
 });
+
+document.getElementById("background2").addEventListener("click", function (event) {
+    if (event.target === this) {
+        closeForm();
+        var form = document.getElementById("myForm").querySelector("form");
+        form.reset(); // Clear the form data
+        document.getElementById("myForm").style.display = "none";
+    }
+});
+
+// Function to open the pop-up form
+function openPopupForm() {
+    document.getElementById("popup-form-thanks").style.display = "block";
+    document.getElementById("myForm").style.display = "none";
+    document.addEventListener("mousedown", closeOnClickOutside);
+  }
+
 
 function sendMail() {
     var params = {
@@ -46,8 +64,25 @@ function sendMail() {
             document.getElementById("time").value = "";
             document.getElementById("message").value = "";
             console.log(res);
-            alert("Your message sent successfully!!")
-
+            openPopupForm();
+            // alert("Your message sent successfully!!")
+            // document.getElementById("myForm").style.display = "none";
         })
         .catch(err => console.log(err));
+
 }
+
+  // Function to close the pop-up form
+  function closePopupForm() {
+    document.getElementById("popup-form-thanks").style.display = "none";
+    document.removeEventListener("mousedown", closeOnClickOutside);
+  }
+
+  // Function to close form when clicking outside
+  function closeOnClickOutside(event) {
+    if (!event.target.closest("#popup-form-thanks")) {
+      closePopupForm();
+    }
+  }
+}
+

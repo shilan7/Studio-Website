@@ -1,79 +1,73 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        /* Styles for the pop-up form */
-        .popup-form {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            align-items: center;
-            justify-content: center;
-        }
+      /* Styles for the pop-up form */
+      #popup-form-thanks {
+        display: none;
+        padding: 2vw 4vw;
+        width: 90%;
+        max-width: max-content;
+        border-radius: 10px;
+        /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        max-height: 80%; /* Set a maximum height for the form */
+        overflow-y: auto; /* Add vertical scroll when content exceeds max-height */
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
 
-        .form-container {
-            background-color: #fff;
-            padding: 20px;
-            width: 400px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        }
+      /* Styles for the close button */
+      .close-btn-thanks {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 20px;
+      }
 
-        /* Styles for the close button */
-        .close-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-        }
+      .close-btn-thanks:hover {
+        transform: scale(1.2); /* Scale up on hover for a cool effect */
+      }
     </style>
-</head>
-<body>
-    <div class="container">
-        <button onclick="openForm()">Open Form</button>
-
-        <div class="popup-form" id="myForm">
-            <div class="form-container">
-                <span class="close-button" onclick="closeForm()">&times;</span>
-                <form onsubmit="sendMail(); reset(); return false;">
-                    <h3>GET IN TOUCH</h3>
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <input type="email" id="email" placeholder="Email id" required>
-                    <input type="text" id="phone" placeholder="Phone Number" required>
-                    <input type="text" id="location" placeholder="Where Are You Located?" required>
-                    <input type="text" id="role" placeholder="What Best Describes You?" required>
-                    <input type="text" id="songs" placeholder="How Many Songs" required>
-                    <input type="text" id="genre" placeholder="Genre/Style" required>
-                    <input type="text" id="budget" placeholder="Estimated Budget" required>
-                    <input type="text" id="time" placeholder="Time Frame" required>
-                    <textarea id="message" rows="4" placeholder="Project Details"></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-        </div>
+  </head>
+  <body>
+    <!-- Thank you pop-up form -->
+    <div id="popup-form-thanks">
+      <span class="close-btn-thanks" onclick="closePopupForm()">&times;</span>
+      <h2>Thank You!</h2>
+      <p>Your message has been sent successfully.</p>
     </div>
 
+    <!-- Trigger button (for demonstration purposes) -->
+    <button onclick="openPopupForm()">Open Thank You Form</button>
+
     <script>
-        function openForm() {
-            document.getElementById("myForm").style.display = "block";
-        }
+      // Function to open the pop-up form
+      function openPopupForm() {
+        document.getElementById("popup-form-thanks").style.display = "block";
+        document.addEventListener("mousedown", closeOnClickOutside);
+      }
 
-        function closeForm() {
-            document.getElementById("myForm").style.display = "none";
-        }
+      // Function to close the pop-up form
+      function closePopupForm() {
+        document.getElementById("popup-form-thanks").style.display = "none";
+        document.removeEventListener("mousedown", closeOnClickOutside);
+      }
 
-        function sendMail() {
-            // Implement your email sending logic here
-            // You can use AJAX or other methods to send the form data
+      // Function to close form when clicking outside
+      function closeOnClickOutside(event) {
+        if (!event.target.closest("#popup-form-thanks")) {
+          closePopupForm();
         }
-
-        function reset() {
-            // Reset the form fields here if needed
-        }
+      }
     </script>
-</body>
+  </body>
 </html>
