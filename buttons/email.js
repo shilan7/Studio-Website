@@ -6,6 +6,7 @@ function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
 
+
 // Add event listener to the container. It allows to clear and close the form when clicked outside the form-container
 document.getElementById("background").addEventListener("click", function (event) {
     if (event.target === this) {
@@ -15,6 +16,7 @@ document.getElementById("background").addEventListener("click", function (event)
         document.getElementById("myForm").style.display = "none";
     }
 });
+
 document.getElementById("background2").addEventListener("click", function (event) {
     if (event.target === this) {
         closeForm();
@@ -30,6 +32,7 @@ function openPopupForm() {
     document.getElementById("myForm").style.display = "none";
     document.addEventListener("mousedown", closeOnClickOutside);
   }
+
 
 function sendMail() {
     var params = {
@@ -66,6 +69,7 @@ function sendMail() {
             // document.getElementById("myForm").style.display = "none";
         })
         .catch(err => console.log(err));
+
 }
 
   // Function to close the pop-up form
@@ -80,3 +84,5 @@ function sendMail() {
       closePopupForm();
     }
   }
+}
+
