@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Styles for the pop-up form */
+      #popup-form-thanks {
+        display: none;
+        padding: 2vw 4vw;
+        width: 90%;
+        max-width: max-content;
+        border-radius: 10px;
+        /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        max-height: 80%; /* Set a maximum height for the form */
+        overflow-y: auto; /* Add vertical scroll when content exceeds max-height */
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+
+      /* Styles for the close button */
+      .close-btn-thanks {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 20px;
+      }
+
+      .close-btn-thanks:hover {
+        transform: scale(1.2); /* Scale up on hover for a cool effect */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Thank you pop-up form -->
+    <div id="popup-form-thanks">
+      <span class="close-btn-thanks" onclick="closePopupForm()">&times;</span>
+      <h2>Thank You!</h2>
+      <p>Your message has been sent successfully.</p>
+    </div>
+
+    <!-- Trigger button (for demonstration purposes) -->
+    <button onclick="openPopupForm()">Open Thank You Form</button>
+
+    <script>
+      // Function to open the pop-up form
+      function openPopupForm() {
+        document.getElementById("popup-form-thanks").style.display = "block";
+        document.addEventListener("mousedown", closeOnClickOutside);
+      }
+
+      // Function to close the pop-up form
+      function closePopupForm() {
+        document.getElementById("popup-form-thanks").style.display = "none";
+        document.removeEventListener("mousedown", closeOnClickOutside);
+      }
+
+      // Function to close form when clicking outside
+      function closeOnClickOutside(event) {
+        if (!event.target.closest("#popup-form-thanks")) {
+          closePopupForm();
+        }
+      }
+    </script>
+  </body>
+</html>

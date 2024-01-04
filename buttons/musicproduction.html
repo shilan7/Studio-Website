@@ -31,21 +31,58 @@
     <link rel="stylesheet" type="text/css" href="../style.css" />
 
     <title>MUSIC PRODUCTION</title>
+
+    <script src=".\email.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("cNQN9EoPhMMLF4w76");
+      })();
+    </script>
+    <script src=".\hbmenu.js"></script>
   </head>
+
   <body>
     <header>
       <nav>
-        <h1>Shiron Perera</h1>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+         <!-- Button to close the overlay navigation -->
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+           >&times;</a
+         >
+  
+         <!-- Overlay content -->
+         <div class="overlay-content">
+           <a href="../index.html">Home</a>
+           <a href="../about.html">About</a>
+           <a href="../testimonials.html">Testimonials</a>
+           <a href="../contact.html">Contact</a>
+         </div>
+       </div>
+  
+       <!-- Use any element to open/show the overlay navigation menu -->
+       <span onclick="openNav()"><div><div class="menubars"></div><div class="menubars"></div><div class="menubars"></div></div></span>
+  
+       
+       <a href="../index.html"><h1>Shiron Perera</h1></a>
+       <ul>
+         <li><a href="../index.html">Home</a></li>
+         <li><a href="../about.html">About</a></li>
+         <li><a href="../testimonials.html">Testimonials</a></li>
+         <li><a href="../contact.html">Contact</a></li>
+       </ul>
+  
+      
+     </nav>
     </header>
 
-    <div class="coverImage">
+    <div class="coverImageMP">
       <!-- <img src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg" alt="Italian Trulli" /> -->
       <h1>Music Production</h1>
     </div>
@@ -86,10 +123,7 @@
         <!-- The stacks in the right column -->
         <div>
           <div class="offerStack">
-            <img
-              src="https://icons8.com/icon/111554/piano.png"
-              alt="Italian Trulli"
-            />
+            <img src="../clipart/1.png" alt="Italian Trulli" />
             <div>
               <h2>FULL PRODUCTION PACKAGE</h2>
               <p>
@@ -102,10 +136,7 @@
           </div>
 
           <div class="offerStack">
-            <img
-              src="https://icons8.com/icon/111554/piano.png"
-              alt="Italian Trulli"
-            />
+            <img src="../clipart/2.png" alt="Italian Trulli" />
             <div>
               <h2>FULL PRODUCTION PACKAGE</h2>
               <p>
@@ -120,7 +151,18 @@
       </div>
     </div>
 
-    <div class="section2">
+    <div class="video1">
+      <iframe
+        class="vid1"
+        src="https://www.youtube.com/embed/AZ3jaoABezQ"
+        title="Epic Film Score for Sintel | 5.1 Surround Sound Mix | Composed by Shiron Perera | DAW - Protools"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div class="section2" id="background2">
       <h1>
         One of my greatest pleasures, professionally, is helping artists make
         their musical goals a reality.
@@ -135,5 +177,286 @@
         approach each project differently.
       </p>
     </div>
+
+    <!-- Thank you pop-up form -->
+    <div id="popup-form-thanks">
+      <span class="close-btn-thanks" onclick="closePopupForm()">&times;</span>
+      <h2>Thank You!</h2>
+      <p>Your message has been sent successfully.</p>
+    </div>
+
+    <hr />
+    <div id="background" class="container">
+      <button class="open-form-button" onclick="openForm()">
+        Open Project Planner
+      </button>
+      <div class="popup-form" id="myForm">
+        <div class="form-container">
+          <span class="close-button" onclick="closeForm()">&#x2716;</span>
+          <form onsubmit="sendMail(); reset(); return false;">
+            <h3>Project Proposal Request Form</h3>
+            <div class="form-row">
+              <input type="text" id="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-row">
+              <input type="email" id="email" placeholder="Email id" required />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="phone"
+                placeholder="Phone Number"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="location"
+                placeholder="Where Are You Located?"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="role"
+                placeholder="What Best Describes You?"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="songs"
+                placeholder="How Many Songs"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="genre"
+                placeholder="Genre/Style"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="budget"
+                placeholder="Estimated Budget"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input type="text" id="time" placeholder="Time Frame" required />
+            </div>
+            <div class="form-row">
+              <textarea
+                id="message"
+                rows="4"
+                placeholder="Project Details"
+              ></textarea>
+            </div>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div id="faq-body">
+      <h4>Frequently Asked Questions (FAQs)</h4>
+      <div class="faq-container" id="background3">
+        <div class="flex_left_side">
+          <div class="faq-item">
+            <button class="accordion">
+              WHAT IS THE DIFFERENCE BETWEEN A DEMO AND A PROFESSIONAL
+              PRODUCTION?
+            </button>
+            <div class="panel">
+              <p>
+                A demo is a relatively simple recording with minimal
+                instrumentation intended to demonstrate the song or artist's
+                ability. A professional production is intended for commercial
+                release and distritribution. It features the best possible
+                performances and production, with all the bells and whistles.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="accordion">
+              I STARTED WRITING A SONG BUT CAN’T FINISH IT ON MY OWN. CAN YOU
+              HELP ME?
+            </button>
+            <div class="panel">
+              <p>
+                Yes I can. However, the process does depend on your writing
+                skills. My main goal is to help you create the best song you’ve
+                made until date. If I feel like it’s necessary, I may suggest
+                rewriting the song together.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="accordion">
+              IS THERE A SPECIFIC GENRE YOU WORK WITH?
+            </button>
+            <div class="panel">
+              <p>
+                I create commercial and “marketable” music for clients. I mostly
+                produce pop, EDM, hip-hop, reggae and indie projects. However,
+                what I create for my clients isn’t bound by genre. I’ve worked
+                across many genres and I can bring that experience and sound to
+                your next project.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="accordion">WHAT IF I DON'T WRITE SONGS?</button>
+            <div class="panel">
+              <p>
+                If you’re a competent singer or band, but have a difficult time
+                with writing your own material, you’re not alone. In fact, some
+                of the best songs you’ve ever heard had almost nothing to do
+                with the people who actually sang them. With your vision, I can
+                taylor a song just for you. Aside from myself, I work with a
+                team of songwriters and lyricists who are available for melodic
+                & lyrical composition.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="accordion">
+              DO I HAVE TO BE SIGNED TO A LABEL TO WORK WITH YOU?
+            </button>
+            <div class="panel">
+              <p>
+                Not at all! Majority of the clients I work with are independent
+                artists.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="accordion">
+              I NEED MULTI-INSTRUMENTALISTS FOR MY RECORD. CAN YOU HELP?
+            </button>
+            <div class="panel">
+              <p>
+                Of course! I work with singer/songwriters often and frequently
+                assist with selecting instrumentalists. I work with a coterie of
+                fiercely emotive, highly skilled musicians that can add drums,
+                bass, guitar, strings, horns, synth, piano and even theremin to
+                your music.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">
+              I WANT TO DO A SINGLE, HOW MUCH DOES IT COST?
+            </button>
+            <div class="panel">
+              <p>
+                Rates vary by the scope and complexity of the project and the
+                services required to produce them. I take into consideration a
+                number of things when I calculate a quote (pre-production,
+                studio time, musicians, post-production, etc.). If you would
+                like to inquire about rates, simply fill out the Project
+                Planner. It’s a “no pressure” quote.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex_right_side">
+          <div class="faq-item">
+            <button class="accordion">WHAT IF I ONLY WRITE LYRICS?</button>
+            <div class="panel">
+              <p>
+                Some of my clients are lyricists with limited music knowledge. I
+                can help you create a melody for your lyrics and build the music
+                around it. I work with some of the finest session singers in the
+                field who can lay down vocals for your song.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">
+              DO YOU OFFER SPECIAL RATES IF I DO A FULL ALBUM?
+            </button>
+            <div class="panel">
+              <p>
+                Absolutley! I love working on full albums! Please fill out the
+                Project Planner and explain your idea. I will create a package
+                that will both meet your budget and keep us up-and-running!
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">
+              DO YOU PRODUCE MUSIC FOR FILM, JINGLES OR RADIO SPOTS?
+            </button>
+            <div class="panel">
+              <p>Yes I do! My commercial reel is available upon request.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">HOW LONG IS YOUR TURNAROUND TIME?</button>
+            <div class="panel">
+              <p>
+                This depends on the capacity of your project. Songs with only
+                one or two instruments usually take between 4-7 days, while full
+                song productions with 5 plus instruments and multiple vocal
+                tracks take 3-4 weeks. These estimates apply to professional
+                productions.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">HOW DO I BOOK A PROJECT WITH YOU?</button>
+            <div class="panel">
+              <p>
+                Fill out the Project Planner to discuss your expectations and
+                goals. We’ll chat about what your project entails such as
+                creative goals, instrumentation, individual roles, number of
+                songs, and we’ll discuss scheduling and pricing. When you’re
+                ready to move forward, we’ll plan a timeline and send you an
+                invoice.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">ARE YOU AVAILABLE IN MY COUNTRY?</button>
+            <div class="panel">
+              <p>
+                I work with anyone from anywhere in the world – so yes! I have
+                successfully collaborated with clients like you in nearly 30
+                countries.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">
+              CAN I CONTACT YOU FOR ADDITIONAL INFORMATION?
+            </button>
+            <div class="panel">
+              <p>Of course! Feel free to Contact Me for further information.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-container">
+      <footer>Copyright © 2023 SHIRON PERERA</footer>
+    </div>
+
+    <script src="./email.js"></script>
+    <script src="./accordion.js"></script>
   </body>
 </html>
