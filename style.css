@@ -1,11 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
 }
 
 html {
-  background-color: black;
+  background-color: rgb(4, 4, 4);
+  font-family: "Poppins", sans-serif;
 }
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.077);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(68, 58, 58);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+/* ---------------------------------------- */
 
 header {
   position: absolute;
@@ -25,8 +49,9 @@ nav {
   color: white;
 }
 
-nav > h1 {
+nav h1 {
   font-size: 2rem;
+  font-family: "Great Vibes", cursive;
 }
 
 nav > ul {
@@ -36,8 +61,78 @@ nav > ul {
 
 nav > ul > li {
   padding: 10px;
-  font-weight: bolder;
-  font-size: larger;
+  font-weight: 400;
+}
+
+span {
+  display: none;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.menubars {
+  background-color: white;
+  margin-bottom: 3px;
+  height: 2px;
+  width: 23px;
 }
 
 .coverImage {
@@ -45,16 +140,16 @@ nav > ul > li {
   justify-content: center;
   align-items: center;
   color: white;
-  height: 600px;
-  background-image: url("https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg");
+  height: 750px;
+  background:linear-gradient(#00000000 75%, #000000), url("https://images.unsplash.com/photo-1598653222000-6b7b7a552625?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .coverImage > h1 {
-  margin-bottom: 10%;
-  font-size: 2.5rem;
+  font-size: 150px;
+  font-family: "Great Vibes", cursive;
 }
 
 .coverImage3 {
@@ -192,16 +287,68 @@ a {
   padding-bottom: 200px;
 }
 
+/* Styling for smaller displays */
+
+@media (max-width: 800px) {
+  span {
+    display: contents;
+  }
+  nav > ul {
+    display: none;
+  }
+  nav h1 {
+    font-size: 20px;
+  }
+  .coverImage > h1 {
+    font-size: 3rem;
+    font-family: "Great Vibes", cursive;
+  }
+  .section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+  }
+
+  .section2 > h1 {
+    font-size: 15px;
+    padding-bottom: 20px;
+  }
+  .section2 > p {
+    font-size: 10px;
+    padding-bottom: 20px;
+  }
+}
+
+/* end of smaller display code------------------------------------------------------------ */
+
+
+
 /* /////////////////////////////////////////////////////////////////////////// */
 
 /* Music Production Cover */
-.coverImageMP {
+/* .coverImageMP {
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   height: 550px;
   background-image: url("https://img.freepik.com/free-photo/close-up-sound-engineer-hands-recording-music_1157-47932.jpg?w=1060&t=st=1690632642~exp=1690633242~hmac=805324b4e2e43c7e5b1365bb116f2ad782d47a39fdc56c867f6313fa7473dc51");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+.coverImageMP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 750px;
+  background-image: url("https://images.unsplash.com/photo-1517353334933-3365be5c8ec3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -318,6 +465,7 @@ a {
   color: white;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   align-items: flex-start;
   padding: 50px 100px;
 }
@@ -327,16 +475,17 @@ a {
   flex-direction: column;
   justify-content: center;
   width: 500px;
+  margin-bottom: 50px;
 }
 
 .descOne > h1 {
   text-align: center;
   margin-bottom: 25px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .descOne > p {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .descTwo {
@@ -349,7 +498,13 @@ a {
 .descTwo > h1 {
   text-align: center;
   margin-bottom: 25px;
-  font-size: 25px;
+  font-size: 20px;
+}
+.descTwo h2 {
+  font-size: 20px;
+}
+.descTwo p {
+  font-size: 15px;
 }
 
 .offerStack {
@@ -360,8 +515,9 @@ a {
 }
 
 .offerStack > img {
-  height: 85px;
-  margin-right: 5%;
+  height: 100px;
+  margin-right: 1px;
+  object-fit: fill;
 }
 
 .video1 {
@@ -525,17 +681,19 @@ h4 {
   margin-top: 50px;
 }
 
-.faq-body {
+/* .faq-body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
+
 .faq-container {
   display: flex;
   justify-content: center;
+  flex-direction: row;
   flex-wrap: wrap;
-  margin: 100px 150px;
   margin-top: 50px;
+  margin-bottom: 100px;
 }
 .faq-item {
   /* display: flex;
@@ -543,8 +701,8 @@ h4 {
   flex-basis: max-width;
   flex-grow: 1;
   flex-shrink: 0;
-  width: 450px;
-  margin: 10px 20px;
+  width: 550px;
+  margin: 10px;
 }
 
 .accordion {
@@ -594,14 +752,164 @@ h4 {
   font-size: 14px;
 }
 
-/* Footer for all pages */
-.footer-container {
-  padding: 20px;
-  margin-bottom: 30px;
-  background-color: rgb(40, 36, 36);
+
+/* Styling for smaller displays */
+
+@media (max-width: 800px) {
+  span {
+    display: contents;
+  }
+  nav > ul {
+    display: none;
+  }
+  nav h1 {
+    font-size: 20px;
+  }
+  .coverImageMP > h1 {
+    font-size: 3rem;
+    font-family: "Bebas Neue", sans-serif;
+  }
+
+  .tileDescription {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 50px 20px;
+  }
+
+  .descOne > h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 15px;
+  }
+
+  .descOne > p {
+    font-size: 10px;
+  }
+
+  .descTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+  }
+
+  .descTwo > h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 15px;
+  }
+  .descTwo h2 {
+    font-size: 15px;
+  }
+  .descTwo p {
+    font-size: 10px;
+  }
+
+  .offerStack {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10%;
+  }
+
+  .offerStack > img {
+    height: 50px;
+    margin-right: 5%;
+  }
+
+  .video1 {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+  }
+
+  .vid1 {
+    width: 90%;
+  }
+
+  /* Accordion FAQ CSS below */
+  h4 {
+    color: white;
+    text-align: center;
+    font-size: larger;
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .faq-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .faq-item {
+    /* display: flex;
+  flex-direction: column; */
+    flex-basis: max-width;
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 365px;
+    margin: 10px;
+  }
+
+  .accordion {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 20px 2px;
+    width: 100%;
+    border: 1px solid lightgray;
+    text-align: left;
+    outline: none;
+    font-size: 8px;
+    transition: 0.4s;
+  }
+
+  .active,
+  .accordion:hover {
+    background-color: none;
+  }
+
+  .accordion:after {
+    content: "+";
+    color: orangered;
+    font-weight: bold;
+    font-size: small;
+    float: left;
+    margin-right: 10px;
+  }
+
+  .active:after {
+    content: "-";
+    color: red;
+    font-size: 15px;
+  }
+
+  .panel {
+    background-color: none;
+    color: rgb(110, 109, 109);
+    max-height: 0;
+    border-top: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .panel p {
+    margin-top: 10px;
+    font-size: 10px;
+  }
 }
 
+/* end of smaller display code------------------------------------------------------------ */
+
 footer {
+  padding: 20px;
+  background-color: rgb(40, 36, 36);
   color: white;
   text-align: center;
 }
@@ -637,3 +945,4 @@ footer {
 .close-btn-thanks:hover {
   transform: scale(1.2); /* Scale up on hover for a cool effect */
 }
+
