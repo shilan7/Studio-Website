@@ -1,131 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Slab:ital,wght@1,700&family=Kalam:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Slab:ital,wght@1,700&family=Kalam:wght@300;700&display=swap"
-    rel="stylesheet" />
+    <script
+      src="https://static.elfsight.com/platform/platform.js"
+      data-use-service-core
+      defer
+    ></script>
 
-  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <script src=".\buttons\hbmenu.js"></script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,700&family=Roboto&display=swap"
-    rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
-  <title>SHIRON PERERA</title>
-</head>
+    <title>SHIRON PERERA</title>
+  </head>
 
-<body>
-  <header>
-    <nav>
+  <body>
+    <header>
+      <nav>
+         <!-- The overlay -->
+         <div id="myNav" class="overlay">
+          <!-- Button to close the overlay navigation -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+
+          <!-- Overlay content -->
+          <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <span onclick="openNav()"><div><div class="menubars"></div><div class="menubars"></div><div class="menubars"></div></div></span>
+
+        
+        <a href="index.html"><h1>Shiron Perera</h1></a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+       
+      </nav>
+    </header>
+
+    <div class="coverImage">
+      <!-- <img src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg" alt="Italian Trulli" /> -->
       <h1>Shiron Perera</h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    </div>
 
-  <div class="coverImage">
-    <!-- <img src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg" alt="Italian Trulli" /> -->
-    <h1>Welcome to Shiron Perera's Website!</h1>
-  </div>
+    <svg class="arrows">
+      <path class="a1" d="M0 0 L30 32 L60 0"></path>
+      <path class="a2" d="M0 20 L30 52 L60 20"></path>
+      <path class="a3" d="M0 40 L30 72 L60 40"></path>
+    </svg>
 
-  <div class="section2">
-    <h1>
-      One of my greatest pleasures, professionally, is helping artists make
-      their musical goals a reality.
-    </h1>
+    <div class="section2">
+      <h1>
+        One of my greatest pleasures, professionally, is helping artists make
+        their musical goals a reality.
+      </h1>
 
-    <p>
-      I provide full range of music and audio services to artists, labels and
-      brands including music production, recording, mixing, vocal production,
-      editing, arranging, and mastering. Through my many years of experience,
-      I’ve had the pleasure of working with diverse clientele across all
-      genres of music and have crafted a unique set of skills allowing me to
-      approach each project differently.
-    </p>
-  </div>
+      <p>
+        I provide full range of music and audio services to artists, labels and
+        brands including music production, recording, mixing, vocal production,
+        editing, arranging, and mastering. Through my many years of experience,
+        I’ve had the pleasure of working with diverse clientele across all
+        genres of music and have crafted a unique set of skills allowing me to
+        approach each project differently.
+      </p>
+    </div>
 
-  <div class="tiles">
+    <div class="tiles">
+      <button class="button1">
+        <a class="btnhover" href="buttons/musicproduction.html">
+          <!-- <div class="btnhover">Music Production</div> -->
+          Music Production
+        </a>
+      </button>
 
-    <button class="button1"><a class="btnhover" href="buttons/musicproduction.html">
-        <!-- <div class="btnhover">Music Production</div> -->
-        Music Production
-      </a></button>
+      <button class="button2">
+        <a class="btnhover" href="buttons/mixingandmastering.html">
+          <!-- <div class="btnhover">Mixing & Mastering</div> -->
+          Mixing & Mastering
+        </a>
+      </button>
 
-    <button class="button2"><a class="btnhover" href="buttons/mixingandmastering.html">
-        <!-- <div class="btnhover">Mixing & Mastering</div> -->
-        Mixing & Mastering
-      </a></button>
+      <button class="button3">
+        <a class="btnhover" href="buttons/studiorecording.html">
+          <!-- <div class="btnhover">Studio Recording</div> -->
+          Studio Recording
+        </a>
+      </button>
 
-    <button class="button3"><a class="btnhover" href="buttons/studiorecording.html">
-        <!-- <div class="btnhover">Studio Recording</div> -->
-        Studio Recording
-      </a></button>
+      <button class="button4">
+        <a class="btnhover" href="buttons/sounddesign.html">
+          <!-- <div class="btnhover">Sound Design</div> -->
+          Sound Design
+        </a>
+      </button>
 
-    <button class="button4"><a class="btnhover" href="buttons/sounddesign.html">
-        <!-- <div class="btnhover">Sound Design</div> -->
-        Sound Design
-      </a></button>
+      <button class="button5">
+        <a class="btnhover" href="buttons/filmscoring.html">
+          <!-- <div class="btnhover">Film Scoring</div> -->
+          Film Scoring
+        </a>
+      </button>
 
-    <button class="button5"><a class="btnhover" href="buttons/filmscoring.html">
-        <!-- <div class="btnhover">Film Scoring</div> -->
-        Film Scoring
-      </a></button>
+      <button class="button6">
+        <a class="btnhover" href="buttons/postproduction.html">
+          <!-- <div class="btnhover">Post Production</div> -->
+          Post Production
+        </a>
+      </button>
 
-    <button class="button6"><a class="btnhover" href="buttons/postproduction.html">
-        <!-- <div class="btnhover">Post Production</div> -->
-        Post Production
-      </a></button>
-
-    <!-- <button class="button7">
+      <!-- <button class="button7">
       <!-- <button class="button7">
         <div class="btnhover">AUD 181 Projects</div>
       </button> -->
-  </div>
+    </div>
 
-  <!-- 
+    <!-- 
     <div class="coverImage3">
       <div class="imagefade">
       </div>
     </div> -->
 
-
-
-  <div class="insta">
-    <h2>SOCIAL MEDIA FEED</h2>
-    <div class="elfsight-app-b8f68021-6fc8-4b9e-9059-3bef074d88de"></div>
-  </div>
-
-
-
-
-
-  <div class="coverImage3">
-    <div class="imagefade">
-      <h2>
-        One good thing about music, when it hits you, you feel no pain. - Bob
-        Marley
-      </h2>
+    <div class="insta">
+      <h2>SOCIAL MEDIA FEED</h2>
+      <div class="elfsight-app-b8f68021-6fc8-4b9e-9059-3bef074d88de"></div>
     </div>
-  </div>
 
+    <div class="coverImage3">
+      <div class="imagefade">
+        <h2>
+          One good thing about music, when it hits you, you feel no pain. - Bob
+          Marley
+        </h2>
+      </div>
+    </div>
 
-  <div class="footer-container">
-    <footer>Copyright © 2023 SHIRON PERERA</footer>
-  </div>
-</body>
-
+    <footer class="footer-container">Copyright © 2023 SHIRON PERERA</footer>
+  </body>
 </html>
