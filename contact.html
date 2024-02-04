@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Slab:ital,wght@1,700&family=Kalam:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <script src=".\buttons\hbmenu.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
@@ -16,7 +39,47 @@
     </script>
   </head>
   <body>
-    <div class="container">
+    <header>
+      <nav>
+         <!-- The overlay -->
+         <div id="myNav" class="overlay">
+          <!-- Button to close the overlay navigation -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+
+          <!-- Overlay content -->
+          <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <span onclick="openNav()"><div><div class="menubars"></div><div class="menubars"></div><div class="menubars"></div></div></span>
+
+        
+        <a href="index.html"><h1>Shiron Perera</h1></a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+       
+      </nav>
+    </header>
+
+    <div class="coverImageAbout">
+      <h1>Contact</h1>
+    </div>
+
+
+
+    <div class="contactContainer">
       <h1>Get In Touch!</h1>
       <p>
         I'd love to hear from you. I aim to answer all requests within 24 hours
@@ -43,43 +106,36 @@
         <button type="submit">Send</button>
       </form>
     </div>
-
+    <footer class="footer-container">Copyright © 2023 SHIRON PERERA</footer>
     <script src="./contactemail.js"></script>
 
     <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-      }
 
-      body {
-        background-color: #f2f2f2;
-      }
-
-      .container {
+      .contactContainer {
         max-width: 600px;
         margin: 0 auto;
         padding: 20px;
-        background-color: #fff;
+        color: white;
+        <!-- background-color: #fff; -->
         border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        <!-- box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); -->
       }
 
-      h1 {
+      .contactContainer h1 {
         text-align: center;
-        font-size: 1.5em;
+        font-size: 22px;
         margin-bottom: 20px;
       }
 
-      p {
+      .contactContainer p {
+        font-size: 15px;
         line-height: 1.5;
         margin-bottom: 20px;
       }
 
       .form-group {
         margin-bottom: 15px;
+        font-size: 15px;
       }
 
       label {
@@ -101,13 +157,14 @@
         height: 150px;
       }
 
-      button {
+      .contactContainer button {
         background-color: #4caf50;
         color: white;
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        font-size: 15px;
       }
 
       button:hover {
@@ -115,9 +172,33 @@
       }
 
       @media (max-width: 768px) {
-        .container {
+        .contactContainer {
           padding: 10px;
         }
+        .contactContainer h1 {
+          text-align: center;
+          font-size: 15px;
+          margin-bottom: 20px;
+        }
+  
+        .contactContainer p {
+          font-size: 10px;
+          line-height: 1.5;
+          margin-bottom: 20px;
+        }
+        .form-group {
+          margin-bottom: 15px;
+          font-size: 10px;
+        }
+        .contactContainer button {
+          background-color: #4caf50;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 15px;
+        }  
       }
     </style>
 
