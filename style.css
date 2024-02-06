@@ -140,11 +140,12 @@ span {
   justify-content: center;
   align-items: center;
   color: white;
-  height: 750px;
+  height: 650px;
   background:linear-gradient(#00000000 75%, #000000), url("https://images.unsplash.com/photo-1598653222000-6b7b7a552625?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  
 }
 
 .coverImage > h1 {
@@ -169,7 +170,7 @@ span {
   font-family: "Bebas Neue", sans-serif;
   font-family: "Josefin Slab", serif;
   font-family: "Kalam", cursive;
-  font-size: 40px;
+  font-size: 10px;
   color: rgb(156, 69, 2);
 }
 
@@ -177,7 +178,7 @@ span {
   background-color: black;
   height: 100%;
   width: 100%;
-  opacity: 40%;
+  opacity: 70%;
   color: white;
   display: flex;
   justify-content: center;
@@ -284,7 +285,7 @@ a {
 }
 
 .section2 {
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
 
 /* Styling for smaller displays */
@@ -352,7 +353,7 @@ a {
   align-items: center;
   color: white;
   height: 750px;
-  background-image: url("https://images.unsplash.com/photo-1517353334933-3365be5c8ec3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: linear-gradient(#00000000 0%, #000000 ),url("https://images.unsplash.com/photo-1517353334933-3365be5c8ec3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -372,7 +373,7 @@ a {
   align-items: center;
   color: white;
   height: 550px;
-  background-image: url("https://images.unsplash.com/photo-1509310202330-aec5af561c6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1209&q=80");
+  background-image: linear-gradient(#00000000 0%, #000000 ),url("https://images.unsplash.com/photo-1509310202330-aec5af561c6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1209&q=80");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -392,7 +393,7 @@ a {
   align-items: center;
   color: white;
   height: 550px;
-  background-image: url("https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-image: linear-gradient(#00000000 0%, #000000 ),url("https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top 30%;
@@ -412,10 +413,10 @@ a {
   align-items: center;
   color: white;
   height: 550px;
-  background-image: url("https://img.freepik.com/free-photo/person-working-soundboard-dark-room_188544-37987.jpg?w=1380&t=st=1690630040~exp=1690630640~hmac=5bcd9760da66cae0394566b8cbb1bf235ff63214c01c05b5b9c7472f1ffe942b");
+  background:linear-gradient(#00000000 0%, #000000 ), url("https://images.pexels.com/photos/4016627/pexels-photo-4016627.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
 }
 
 .coverImageSD > h1 {
@@ -425,6 +426,7 @@ a {
   font-family: "Bebas Neue", sans-serif;
 }
 
+
 /* Film Scoring Cover */
 .coverImageFS {
   display: flex;
@@ -432,7 +434,7 @@ a {
   align-items: center;
   color: white;
   height: 550px;
-  background-image: url("https://images.pexels.com/photos/8100067/pexels-photo-8100067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-image: linear-gradient(#00000000 0%, #000000 ),url("https://images.pexels.com/photos/8100067/pexels-photo-8100067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -452,7 +454,7 @@ a {
   align-items: center;
   color: white;
   height: 550px;
-  background-image: url("https://images.pexels.com/photos/12840332/pexels-photo-12840332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-image: linear-gradient(#00000000 0%, #000000 ),url("https://images.pexels.com/photos/12840332/pexels-photo-12840332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -528,11 +530,21 @@ a {
   display: flex;
   justify-content: center;
   height: 500px;
+} 
+
+.video1 > iframe{
+  border: solid ;
+  margin:10px;
+  border-color: rgb(74, 74, 74);
+  border-width: 3px;
+  border-radius: 10px; 
+  
 }
 
-.vid1 {
+
+/* .vid1 {
   width: 50%;
-}
+} */
 
 /* MAKING THE FORM */
 .container {
@@ -792,7 +804,7 @@ h4 {
 
 footer {
   padding: 20px;
-  background-color: rgb(40, 36, 36);
+  background-color: rgb(34, 33, 33);
   color: white;
   text-align: center;
 }
@@ -866,6 +878,7 @@ footer {
     height: 50px;
     margin-right: 5%;
   }
+
 
   .video1 {
     display: flex;
@@ -1037,3 +1050,52 @@ footer {
 }
 
 
+/* --------scrolling arrow ----- */
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 20px;
+}
+
+.arrows path {
+  stroke: #2994D1;
+  fill: transparent;
+  stroke-width: 1px;  
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+  animation-delay:-1s;
+  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay:-0.5s;
+  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 { 
+  animation-delay:0s;
+  -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
