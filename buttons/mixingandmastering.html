@@ -30,19 +30,54 @@
 
     <link rel="stylesheet" type="text/css" href="../style.css" />
 
-    <title>SHIRON PERERA</title>
+    <script src=".\email.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("cNQN9EoPhMMLF4w76");
+      })();
+    </script>
+    <script src=".\hbmenu.js"></script>
   </head>
+
   <body>
     <header>
       <nav>
-        <h1>Shiron Perera</h1>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../testimonials.html">Testimonials</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-      </nav>
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+         <!-- Button to close the overlay navigation -->
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+           >&times;</a
+         >
+  
+         <!-- Overlay content -->
+         <div class="overlay-content">
+           <a href="../index.html">Home</a>
+           <a href="../about.html">About</a>
+           <a href="../testimonials.html">Testimonials</a>
+           <a href="../contact.html">Contact</a>
+         </div>
+       </div>
+  
+       <!-- Use any element to open/show the overlay navigation menu -->
+       <span onclick="openNav()"><div><div class="menubars"></div><div class="menubars"></div><div class="menubars"></div></div></span>
+  
+       
+       <a href="../index.html"><h1>Shiron Perera</h1></a>
+       <ul>
+         <li><a href="../index.html">Home</a></li>
+         <li><a href="../about.html">About</a></li>
+         <li><a href="../testimonials.html">Testimonials</a></li>
+         <li><a href="../contact.html">Contact</a></li>
+       </ul>
+  
+      
+     </nav>
     </header>
 
     <div class="coverImageMM">
@@ -50,20 +85,477 @@
       <h1>MIXING AND MASTERING</h1>
     </div>
 
-    <div class="section2">
-      <h1>
-        One of my greatest pleasures, professionally, is helping artists make
-        their musical goals a reality.
-      </h1>
+    <!-- Description of the page -->
+    <div class="tileDescription">
+      <!-- Left column of the Description -->
+      <div class="descOne">
+        <h1>BREATHE LIFE INTO YOUR SONGS!</h1>
+        <p>
+          The mixing stage has an enormous impact on the way your song will be
+          interpreted. While there is no substitute for a dynamic, exciting
+          musical performance, a good mix can enhance every aspect of that
+          performance so that the final result truly makes your song stand out.
+        </p>
+        <br>
+        <p>
+          The final mix will let you hear and discern all the sepparate elements
+          with detail. It will add sonic depth, width, and clarity enhancing the
+          overall picture and feel of your song.
+        </p>
+        <br>
+        <p>
+          Whether you recorded your music
+          at home on modest equipment, or in a professional studio setting, my
+          goal is to make your recorded tracks sound their absolute best,
+          meticulously balanced, impactful, translatable to all listening
+          environments and most importantly, complementary to your song. 
+        </p>
+        <br>
+        <p>
+          To me,
+          a good mix exceeds your musical vision. I let your music dictate the
+          choice of levels, processing, and effects, so that the true emotional
+          message of the song is conveyed to the listener in the best possible
+          way.
+        </p>
+      
+      </div>
+      <!--Right  column of the Description -->
 
-      <p>
-        I provide full range of music and audio services to artists, labels and
-        brands including music production, recording, mixing, vocal production,
-        editing, arranging, and mastering. Through my many years of experience,
-        I’ve had the pleasure of working with diverse clientele across all
-        genres of music and have crafted a unique set of skills allowing me to
-        approach each project differently.
-      </p>
+      <div class="descTwo">
+        <h1>What I Offer</h1>
+
+        <!-- The stacks in the right column -->
+        <div>
+          <div class="offerStack">
+            <img src="../clipart/13.png" alt="Italian Trulli" />
+            <div>
+              <h2>PROJECT PLANNER</h2>
+              <p>
+                Fill out the project planner below and get a free quote within
+                24 hours. The form will provide me with enough information to
+                give you a general idea of cost for your project.
+              </p>
+            </div>
+          </div>
+
+          <div class="offerStack">
+            <img src="../clipart/14.png" alt="Italian Trulli" />
+            <div>
+              <h2>UPLOAD YOUR PROJECT</h2>
+              <p>
+                Send your Pro Tools session or consolidated audio stems using a
+                large file transfer service like WeTransfer, DropBox or
+                HighTail. Zip all files into a single archive and include a
+                rough mix printed from the current version of the song.
+              </p>
+            </div>
+          </div>
+          <div class="offerStack">
+            <img src="../clipart/15.png" alt="Italian Trulli" />
+            <div>
+              <h2>MIXING</h2>
+              <p>
+                After I receive your files, I'll set to work mixing your tracks.
+                Turnaround time varies deppening on the size and complexity of
+                the mix, but is typically 5 to 10 business days.
+              </p>
+            </div>
+          </div>
+          <div class="offerStack">
+            <img src="../clipart/5.png" alt="Italian Trulli" />
+            <div>
+              <h2>PREVIEW AND REVISIONS</h2>
+              <p>
+                When the mix is ready, I upload a high quality copy of the mix
+                for you to evaluate. I encourage clients to listen to the song
+                in as many environments as possible. Make detailed notes of any
+                changes you want me to make.
+              </p>
+            </div>
+          </div>
+          <div class="offerStack">
+            <img src="../clipart/3.png" alt="Italian Trulli" />
+            <div>
+              <h2>DOWNLOAD THE FINAL MIX</h2>
+              <p>
+                Once you approve a final mix, I will send you the final mix
+                package including Main, TV (mix minus lead vocals),
+                Instrumental, and Acapella.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="video1">
+      <iframe
+        width="552"
+        height="339"
+        src="https://www.youtube.com/embed/GktaejRlv9Q"
+        title="Vikshopa Ma Mariye වික්ෂෝප මා මරියේ   - Isuri Shalika வியாகுல மாமரியே தியாகத்தின் மாதாவே"
+        frameborder="1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+
+      <iframe
+        width="552"
+        height="339"
+        src="https://www.youtube.com/embed/sMM0iyVOAWk"
+        title="Guli Mata🇮🇳🇱🇰🇦🇪 #saadlamjarred #gulimata#srilanka #shreyaghosal  #trending #viral #music"
+        frameborder="1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+
+      <iframe
+        width="552"
+        height="339"
+        src="https://www.youtube.com/embed/e4lLKYc6vOw"
+        title="Munbe Vaa Cover Song | Isuri Shalika #trending #viral #munbeva #arrahman #cover #Isurishalika"
+        frameborder="1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <!-- Thank you pop-up form -->
+    <div id="popup-form-thanks">
+      <span class="close-btn-thanks" onclick="closePopupForm()">&times;</span>
+      <h2>Thank You!</h2>
+      <p>Your message has been sent successfully.</p>
+    </div>
+
+    <hr />
+    <div id="background" class="container">
+      <button class="open-form-button" onclick="openForm()">
+        Open Project Planner
+      </button>
+      <div class="popup-form" id="myForm">
+        <div class="form-container">
+          <span class="close-button" onclick="closeForm()">&#x2716;</span>
+          <form onsubmit="sendMail(); reset(); return false;">
+            <h3>Project Proposal Request Form</h3>
+            <div class="form-row">
+              <input type="text" id="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-row">
+              <input type="email" id="email" placeholder="Email id" required />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="phone"
+                placeholder="Phone Number"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="location"
+                placeholder="Where Are You Located?"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="role"
+                placeholder="What Best Describes You?"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="songs"
+                placeholder="How Many Songs"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="genre"
+                placeholder="Genre/Style"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="budget"
+                placeholder="Estimated Budget"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input type="text" id="time" placeholder="Time Frame" required />
+            </div>
+            <div class="form-row">
+              <textarea
+                id="message"
+                rows="4"
+                placeholder="Project Details"
+              ></textarea>
+            </div>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div id="faq-body">
+      <h4>Frequently Asked Questions (FAQs)</h4>
+      <div class="faq-container" id="background3">
+        <div class="flex_left_side">
+          <div class="faq-item">
+            <button class="accordion">
+              HOW DO I PREPARE MY SONG FOR MIXING?
+            </button>
+            <div class="panel">
+              <p>
+                The best and safest way to prepare your stems for mixing is to
+                bounce them all out as separate raw audio files (WAV or AIF) in
+                the same sample rate / bit depth in which they were recorded
+                without audio clipping. First, take off all the processing you
+                may have done. So no EQ, compression or reverb / delays. If
+                there are effects that are important to you, include a dry
+                version and a version with effects of those tracks. Make sure
+                you export tracks that are consolidated or bounced from the
+                start point of your song. Check your DAW’s manual on how to do
+                this. Label everything clearly so that a bass is a bass, and a
+                guitar is a guitar, etc. I ask that you also double check your
+                audio files before uploading. Reload them into a new
+                Session/Project, checking that they are the correct placement
+                and length, Also check that any crossfades have been included
+                when consolidating or bouncing in place. If you are using Pro
+                Tools or Logic X, you can send the session file (please include
+                all audio files). The only thing you must do is convert any midi
+                or virtual instrument tracks to audio because I don’t always
+                have the same synths or sound banks. Zip all files into a single
+                archive and include a rough mix printed from the current version
+                of the song.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="accordion">
+              DO YOU NEED DI-TRACKS OF GUITAR AND BASS?
+            </button>
+            <div class="panel">
+              <p>
+                Yes! I love DI-tracks especially bass! Also, I might want to
+                re-amp or use an amp simulator on the guitar parts if necessary.
+                If you can, always record a clean DI track along with any mic-ed
+                up amps.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="accordion">DO I SEND YOU A ROUGH MIX?</button>
+            <div class="panel">
+              <p>
+                If you have one, please do! While not necessary, this can help
+                me get a better understanding of how you’ve envisioned the final
+                version of your work. Let me know what you like about it and
+                what you don’t. I might want to go in a different direction, but
+                if there are essential elements for you in the rough mix I will
+                absolutely respect them.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="accordion">WHAT IF I DON'T WRITE SONGS?</button>
+            <div class="panel">
+              <p>
+                If you’re a competent singer or band, but have a difficult time
+                with writing your own material, you’re not alone. In fact, some
+                of the best songs you’ve ever heard had almost nothing to do
+                with the people who actually sang them. With your vision, I can
+                taylor a song just for you. Aside from myself, I work with a
+                team of songwriters and lyricists who are available for melodic
+                & lyrical composition.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="accordion">
+              SHOULD I SEND YOU A REFERENCE TRACK OR MULTIPLE REFERENCES?
+            </button>
+            <div class="panel">
+              <p>
+                Absolutely! Feel free to include any songs from other bands or
+                artists that you want me to use as a mix reference. Having
+                references from work which inspires your sound can be useful as
+                I try to hone the overall sound and feel of your project.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="accordion">
+              I NEED MULTI-INSTRUMENTALISTS FOR MY RECORD. CAN YOU HELP?
+            </button>
+            <div class="panel">
+              <p>
+                Of course! I work with singer/songwriters often and frequently
+                assist with selecting instrumentalists. I work with a coterie of
+                fiercely emotive, highly skilled musicians that can add drums,
+                bass, guitar, strings, horns, synth, piano and even theremin to
+                your music.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">
+              HOW MANY MIX REVISIONS DO YOU OFFER?
+            </button>
+            <div class="panel">
+              <p>
+                Each song comes with 2 rounds of revisions. I encourage you to
+                be as concise and specific in your original direction and
+                revision feedback as possible. An extra fee will be billed for
+                additional work after included revisions.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">DO YOU ONLY MIX SPECIFIC GENRES?</button>
+            <div class="panel">
+              <p>
+                Not at all. I'm well versed in a variety of genres when it comes
+                to mixing. I am lucky to have been asked to work on music from a
+                lot of different styles and backgrounds. I'm a music fan first
+                and I work with songs that excite me.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex_right_side">
+          <div class="faq-item">
+            <button class="accordion">
+              CAN I HEAR A FREE SAMPLE OF MY MUSIC MIXED?
+            </button>
+            <div class="panel">
+              <p>
+                Unfortunately, I cannot provide free mixing samples since this
+                significantly reduces my turnaround time. I pride myself with
+                outstanding customer service, so rest assured you will love your
+                final product (and remember you get 2 free revisions!)
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">
+              WHERE ARE YOU LOCATED? CAN I ATTEND THE MIXING SESSION?
+            </button>
+            <div class="panel">
+              <p>
+                I’m based in New York. Unfortunately, I do not offer the option
+                of attended sessions at this time as this would drastically
+                increase costs and impact work flow.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">
+              DO YOU MIX WITH ANALOG GEAR? OR STRICTLY 'IN-THE-BOX'?
+            </button>
+            <div class="panel">
+              <p>
+                I've spent time working with both analog-hybrid and ITB mixing,
+                and have access to both methods. They both have great traits,
+                but due to my preferences, workflow, and number of ongoing mix
+                projects, I've currently been favoring ITB mixing. Every often I
+                would incorporate outboard units to my mix.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">
+              DO YOU PROVIDE DRUM EDITING OR AUTO-TUNE ON VOCALS?
+            </button>
+            <div class="panel">
+              <p>
+                All audio editing and pitch-correction are included in the mix
+                package. Automated corrections can sometimes put small things in
+                weird places, or even make things TOO perfect sometimes. I
+                believe these sorts of adjustments come out better when they are
+                personaly judged and manually done to ensure it sounds natural
+                and as intended.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">
+              WHAT IF MY RECORDING QUALITY IS LESS THAN IDEAL?
+            </button>
+            <div class="panel">
+              <p>
+                Sometimes audio magic can be accomplished easily, other times it
+                can be tough. I am able to remove background noises, bad
+                frequencies, and provide many other special touches that can
+                make the source sound better, although it is often better to
+                re-record any trouble sections to ensure the best end result.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">
+              HOW CAN I HAVE A COPY OF THE SESSION?
+            </button>
+            <div class="panel">
+              <p>
+                Because I use a variety of different plugins and outboard units,
+                this is not possible. Instead, I can “Stem” all of your
+                individual tracks. A stem is basically a “printed” version of,
+                let’s say, the vocals. The plugins and processes I used on that
+                vocals are “printed” to the track. That way when you open the
+                stem in your software, you’ll hear the exact vocals used in the
+                mix without needing the plugins. This process is repeated for
+                each sound (track) in your song.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">
+              DO YOU OFFER DEALS FOR MORE THAN ONE SONG AT A TIME?
+            </button>
+            <div class="panel">
+              <p>
+                Discounts on multiple songs can be certainly be discussed.
+                Please note, discounts can only be negotiated in regards to
+                full-scope projects (ie – an EP or album, not individual singles
+                over the course of a year).
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">
+              CAN I CONTACT YOU FOR ADDITIONAL INFORMATION?
+            </button>
+            <div class="panel">
+              <p>Of course! Feel free to Contact Me for further information.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-container">
+      <footer>Copyright © 2023 SHIRON PERERA</footer>
+    </div>
+
+    <script src="./email.js"></script>
+    <script src="./accordion.js"></script>
   </body>
 </html>
