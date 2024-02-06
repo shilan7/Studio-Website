@@ -30,12 +30,49 @@
 
     <link rel="stylesheet" type="text/css" href="../style.css" />
 
-    <title>SHIRON PERERA</title>
+    <script src=".\email.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("cNQN9EoPhMMLF4w76");
+      })();
+    </script>
+    <script src=".\hbmenu.js"></script>
   </head>
+
   <body>
     <header>
       <nav>
-        <h1>Shiron Perera</h1>
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+          <!-- Button to close the overlay navigation -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+
+          <!-- Overlay content -->
+          <div class="overlay-content">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="../testimonials.html">Testimonials</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <span onclick="openNav()"
+          ><div>
+            <div class="menubars"></div>
+            <div class="menubars"></div>
+            <div class="menubars"></div></div
+        ></span>
+
+        <a href="../index.html"><h1>Shiron Perera</h1></a>
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../about.html">About</a></li>
@@ -50,20 +87,363 @@
       <h1>FILM SCORING</h1>
     </div>
 
-    <div class="section2">
-      <h1>
-        One of my greatest pleasures, professionally, is helping artists make
-        their musical goals a reality.
-      </h1>
+    <!-- Description of the page -->
+    <div class="tileDescription">
+      <!-- Left column of the Description -->
+      <div class="descOne">
+        <h1>MORE THAN A FILM!</h1>
+        <p>
+          Dedicated to cinematic excellence, I have pride on my meticulous
+          attention to detail, ensuring that each note woven into my
+          compositions enhances the narrative, providing an unforgettable sonic
+          backdrop to your story.
+          <br />
+          From evocative moments to thrilling climaxes, my versatile expertise
+          spans various genres and moods, promising a symphony that seamlessly
+          complements the visuals on screen. Embark on a transformative journey
+          where storytelling meets musical mastery. Here, your narrative finds
+          its ideal symphony, and the power of music in film reaches new
+          heights.
+          <br />
+          With a commitment to precision, versatility, and cinematic excellence,
+          I strive to create an immersive sonic experience that resonates deeply
+          with audiences, breathing life into every frame and enhancing the
+          storytelling impact of each project.
+          <br />
+          My passion lies in the transformative power of music, and my mission
+          is to seamlessly weave it into the fabric of every cinematic creation,
+          leaving an indelible mark on the viewer's journey
+        </p>
+        <br />
+      </div>
+      <!--Right  column of the Description -->
 
-      <p>
-        I provide full range of music and audio services to artists, labels and
-        brands including music production, recording, mixing, vocal production,
-        editing, arranging, and mastering. Through my many years of experience,
-        I’ve had the pleasure of working with diverse clientele across all
-        genres of music and have crafted a unique set of skills allowing me to
-        approach each project differently.
-      </p>
+      <div class="descTwo">
+        <h1>What I Offer</h1>
+
+        <!-- The stacks in the right column -->
+        <div>
+          <div class="offerStack">
+            <img src="../clipart/7.png" alt="Italian Trulli" />
+            <div>
+              <h2>Soundtrack Adaptation/Arrangement</h2>
+              <p>
+                Provide services to adapt and arrange existing music or licensed
+                tracks to suit the specific needs of a film. This can involve
+                reinterpreting pieces to fit the film's mood, atmosphere, and
+                pacing, ensuring a cohesive and impactful integration of music
+                with the visual storytelling.
+              </p>
+            </div>
+          </div>
+          <div class="offerStack">
+            <img src="../clipart/11.png" alt="Italian Trulli" />
+            <div>
+              <h2>Scoring for Trailers/Promotional Material</h2>
+              <p>
+                Tailor musical compositions for film trailers, teasers, and
+                promotional material to captivate audiences and generate
+                anticipation for the upcoming film. This service involves
+                creating impactful and concise musical pieces that effectively
+                convey the essence of the film, leaving a lasting impression on
+                viewers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="video1">
+      <iframe
+        width="670"
+        height="360"
+        src="https://www.youtube.com/embed/AZ3jaoABezQ"
+        title="Epic Film Score for Sintel | 5.1 Surround Sound Mix | Composed by Shiron Perera | DAW - Protools"
+        frameborder="1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+      <iframe
+        width="670"
+        height="360"
+        src="https://www.youtube.com/embed/vC_JRShSceA"
+        title="Blade Runner 2049  | Emotional Sci-Fi Soundtrack | Shiron Perera"
+        frameborder="1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <!-- Thank you pop-up form -->
+    <div id="popup-form-thanks">
+      <span class="close-btn-thanks" onclick="closePopupForm()">&times;</span>
+      <h2>Thank You!</h2>
+      <p>Your message has been sent successfully.</p>
+    </div>
+
+    <hr />
+    <div id="background" class="container">
+      <button class="open-form-button" onclick="openForm()">
+        Open Project Planner
+      </button>
+      <div class="popup-form" id="myForm">
+        <div class="form-container">
+          <span class="close-button" onclick="closeForm()">&#x2716;</span>
+          <form onsubmit="sendMail(); reset(); return false;">
+            <h3>Project Proposal Request Form</h3>
+            <div class="form-row">
+              <input type="text" id="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-row">
+              <input type="email" id="email" placeholder="Email id" required />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="phone"
+                placeholder="Phone Number"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="location"
+                placeholder="Where Are You Located?"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="role"
+                placeholder="What Best Describes You?"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="songs"
+                placeholder="How Many Songs"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="genre"
+                placeholder="Genre/Style"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="budget"
+                placeholder="Estimated Budget"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input type="text" id="time" placeholder="Time Frame" required />
+            </div>
+            <div class="form-row">
+              <textarea
+                id="message"
+                rows="4"
+                placeholder="Project Details"
+              ></textarea>
+            </div>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div id="faq-body">
+      <h4>Frequently Asked Questions (FAQs)</h4>
+      <div class="faq-container" id="background3">
+        <div class="flex_left_side">
+          <div class="faq-item">
+            <button class="accordion">
+              WHAT ARE YOUR HOURS FOR RECORDING?
+            </button>
+            <div class="panel">
+              <p>
+                I don’t have set hours per say. Everything is by appointment,
+                but I don’t usually like to record before 9 am or after 11pm.
+                Fill out the Project Planner if you’d like to set up a session
+                or set up a special appointment.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">HOW FAR AHEAD DO I NEED TO BOOK?</button>
+            <div class="panel">
+              <p>
+                With as much notice as possible. To guarantee your preferred
+                days, please contact me as soon as you have decided on your
+                schedule.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="accordion">HOW DO SESSION TIMES WORK?</button>
+            <div class="panel">
+              <p>
+                Your session time starts from when you, or your crew, arrive and
+                ends once all equipment is packed down and you leave the
+                facility. A good setup is key to a smooth session and takes time
+                to complete. Please ensure you account for the time it takes you
+                to setup, backup session files and pack down your equipment when
+                planning your day.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="accordion">
+              HOW LONG WILL IT TAKE TO RECORD VOCALS?
+            </button>
+            <div class="panel">
+              <p>
+                It all depends on how prepared you are. You also need to factor
+                the amount of vocal stacks and overdubs needed to complete the
+                song (harmonies, backgrounds, doubles, etc.). I have seen
+                artists come in knock out their takes in a few hours, on the
+                other hand I have seen artists take a whole day to finish a
+                song.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="accordion">
+              I AM A SPOKEN WORD ARTIST, CAN YOU HELP?
+            </button>
+            <div class="panel">
+              <p>
+                Yes! I record poets, narrators, and other artists not working
+                with accompanying music. Please note that there's a three-hour
+                minimum for recording sessions.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="accordion">
+              HOW MUCH TIME DOES MY BAND NEED TO BOOK TO RECORD AN ALBUM?
+            </button>
+            <div class="panel">
+              <p>
+                Every project will vary, but a good rule of thumb is to book one
+                day per song for a typical indie-rock band
+                (guitar/bass/drums/vox). A well-rehearsed, four-piece band
+                recording a 10-song full-length record can usually get basic
+                tracks recorded in 3-5 days and overdubs recorded in 1-2 days.
+                Projects with more instrumentation and complexity will take
+                longer and projects with less instrumentation and complexity
+                will take less time.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex_right_side">
+          <div class="faq-item">
+            <button class="accordion">
+              DO YOU TRACK BANDS LIVE OR MULTI-TRACK?
+            </button>
+            <div class="panel">
+              <p>
+                Both! In our planning conversations, we’ll talk about what makes
+                the most sense to capture your energy and produce the best
+                recordings, and discuss how you intend to use the recording when
+                it is finished. If you are recording a song for commercial
+                release and distribution, then it is best to record each track
+                separately.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">
+              CAN YOU FIND A DRUMMER AND OTHER MUSICIANS FOR MY SESSION?
+            </button>
+            <div class="panel">
+              <p>
+                More than likely! I work with a coterie of fiercely emotive,
+                highly skilled musicians that can add drums, bass, guitar,
+                strings, horns, synth, piano and even theremin to your music.
+                Please note, it's an additional fee to hire studio musicians.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">
+              WILL YOU COME RECORD US WHERE WE LIVE?
+            </button>
+            <div class="panel">
+              <p>
+                Sure! It often makes more sense for me to come to you rather
+                than flying in 5 to 6 people to me.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">
+              WHAT IF I NEED TO RESCHEDULE OR CANCEL A RECORDING SESSION?
+            </button>
+            <div class="panel">
+              <p>
+                If you’re scheduled for recording and you encounter an
+                unexpected conflict, I will work with you to reschedule your
+                sessions as soon as possible, but please understand that studio
+                and production schedules stay pretty full so flexibility may be
+                necessary. Immediate rescheduling may not be possible.
+                Individual session musicians, gear rental providers, and
+                recording studios may have their own policies about
+                rescheduling. <br />
+                All payments are non-refundable once paid. If a session is
+                canceled, you will receive a company credit in the amount of the
+                payments received. Credits can only be applied to the services
+                for which they were originally paid. Any credits not used within
+                thirty days of the original invoice date will be forfeited.
+                Payments made to compensate session musicians, hire gear, or pay
+                for studio space are non-refundable and non-creditable.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">HOW DO I BOOK A SESSION WITH YOU?</button>
+            <div class="panel">
+              <p>
+                Fill out the Project Planner to book a session. Provide as much
+                information as possible and we’ll discuss scheduling and
+                pricing. When you’re ready to move forward, we’ll confirm a day
+                and time, and book a studio that suits your project.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="accordion">
+              CAN I CONTACT YOU FOR ADDITIONAL INFORMATION?
+            </button>
+            <div class="panel">
+              <p>Of course! Feel free to Contact Me for further information.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-container">
+      <footer>Copyright © 2023 SHIRON PERERA</footer>
+    </div>
+
+    <script src="./email.js"></script>
+    <script src="./accordion.js"></script>
   </body>
 </html>
