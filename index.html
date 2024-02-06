@@ -38,8 +38,8 @@
   <body>
     <header>
       <nav>
-         <!-- The overlay -->
-         <div id="myNav" class="overlay">
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
           <!-- Button to close the overlay navigation -->
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
             >&times;</a
@@ -55,18 +55,20 @@
         </div>
 
         <!-- Use any element to open/show the overlay navigation menu -->
-        <span onclick="openNav()"><div><div class="menubars"></div><div class="menubars"></div><div class="menubars"></div></div></span>
+        <span onclick="openNav()"
+          ><div>
+            <div class="menubars"></div>
+            <div class="menubars"></div>
+            <div class="menubars"></div></div
+        ></span>
 
-        
         <a href="index.html"><h1>Shiron Perera</h1></a>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
+          <!-- <li><a href="testimonials.html">Testimonials</a></li> -->
           <li><a href="contact.html">Contact</a></li>
         </ul>
-
-       
       </nav>
     </header>
 
@@ -75,25 +77,37 @@
       <h1>Shiron Perera</h1>
     </div>
 
-    <svg class="arrows">
-      <path class="a1" d="M0 0 L30 32 L60 0"></path>
-      <path class="a2" d="M0 20 L30 52 L60 20"></path>
-      <path class="a3" d="M0 40 L30 72 L60 40"></path>
-    </svg>
+    <a href="#secondPart">
+      <svg class="arrows">
+        <path class="a1" d="M0 0 L30 32 L60 0"></path>
+        <path class="a2" d="M0 20 L30 52 L60 20"></path>
+        <path class="a3" d="M0 40 L30 72 L60 40"></path>
+      </svg>
+    </a>
 
-    <div class="section2">
+    <div id="secondPart" class="section2">
       <h1>
         One of my greatest pleasures, professionally, is helping artists make
         their musical goals a reality.
       </h1>
 
       <p>
-        I provide full range of music and audio services to artists, labels and
-        brands including music production, recording, mixing, vocal production,
-        editing, arranging, and mastering. Through my many years of experience,
-        I’ve had the pleasure of working with diverse clientele across all
-        genres of music and have crafted a unique set of skills allowing me to
-        approach each project differently.
+        In the vast tapestry of my creative journey, I take pride in offering a
+        comprehensive spectrum of music and audio services, extending a
+        harmonious symphony of possibilities to artists, labels, and brands
+        alike. My artistic palette includes the delicate strokes of music
+        production, the meticulous capturing of moments in recording, the
+        alchemy of blending elements in mixing, the refined touch of vocal
+        production, the intricate dance of editing, the artful arrangement of
+        musical elements, and the final, transformative polish of mastering.
+        Over the years, I have had the privilege of weaving my musical expertise
+        into the visions of a diverse clientele spanning across the rich mosaic
+        of music genres. This journey has not only enriched my understanding of
+        the craft but has also bestowed upon me a unique set of skills, a
+        versatile toolkit honed by the varied nuances of each project. I
+        approach each endeavor with a keen awareness that every melody carries
+        its own narrative, every rhythm its unique heartbeat, and every artist's
+        voice its singular resonance.
       </p>
     </div>
 
@@ -159,12 +173,32 @@
     <div class="coverImage3">
       <div class="imagefade">
         <h2>
-          One good thing about music, when it hits you, you feel no pain. - Bob
-          Marley
+          "Music is the heartbeat of humanity, a rhythmic pulse that echoes
+          through the corridors of time. It has the extraordinary ability to
+          evoke memories, create atmospheres, and transport us to different
+          epochs. In its rich tapestry, we find echoes of our past, whispers of
+          our present, and glimpses of the limitless possibilities that await in
+          the future."
+          <br />
+          <br />
+          HANS ZIMMER
         </h2>
       </div>
     </div>
 
-    <footer class="footer-container">Copyright © 2023 SHIRON PERERA</footer>
+    <footer>Copyright © 2023 SHIRON PERERA</footer>
+
+    <script>
+      $(function () {
+        $("a[href*=#]").on("click", function (e) {
+          e.preventDefault();
+          $("html, body").animate(
+            { scrollTop: $($(this).attr("href")).offset().top },
+            500,
+            "easeInOutExpo"
+          );
+        });
+      });
+    </script>
   </body>
 </html>
