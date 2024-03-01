@@ -529,7 +529,8 @@ a {
 .video1 {
   display: flex;
   justify-content: center;
-  height: 500px;
+  align-items: center;
+  flex-wrap: wrap;
 } 
 
 .video1 > iframe{
@@ -883,11 +884,13 @@ footer {
   .video1 {
     display: flex;
     justify-content: center;
-    height: 200px;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
-  .vid1 {
-    width: 90%;
+  .video1 > iframe {
+    width: 50%;
+    height: 50%
   }
 
   .popup-form {
