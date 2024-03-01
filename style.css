@@ -166,15 +166,19 @@ span {
   filter: brightness(155%);
 }
 
-.coverImage3 > h2 {
+/* .coverImage3 > h2 {
   font-family: "Bebas Neue", sans-serif;
   font-family: "Josefin Slab", serif;
   font-family: "Kalam", cursive;
   font-size: 10px;
   color: rgb(156, 69, 2);
-}
+} */
 
 .imagefade {
+  font-family: "Bebas Neue", sans-serif;
+  font-family: "Josefin Slab", serif;
+  font-family: "Kalam", cursive;
+  font-size: 10px;
   background-color: black;
   height: 100%;
   width: 100%;
